@@ -1,10 +1,13 @@
 import mongoose from 'mongoose';
 
 const dataSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  phoneNo: { type: String, required: true },
-  branch: { type: String, required: true },
-  fees: { type: Number, required: true }
+  AnimeCategories:{type:String, required:true},
+  Animename: { type: String, required: true },
+  writername: { type: String, required: true },
+  art: { type: String, required: true },
+  Reads: { type: String, required:false },
+  Description:{ type: String, required: true },
+  AnimeImage: { type: String, required: true },
 });
 
 export default mongoose.model('Data', dataSchema);

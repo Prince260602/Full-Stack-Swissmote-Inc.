@@ -1,13 +1,26 @@
-import React from 'react';
-import DataTable from './components/DataTable';
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AnimeList from './pages/AnimeList.jsx'
+import AnimeDetail from './pages/AnimeDetail.jsx'
+
 
 function App() {
   return (
-    <div>
-      <h1>Data Table</h1>
-      <DataTable />
-    </div>
-  );
+    <>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<AnimeList />} />
+      <Route path='/anime/:id' element={<AnimeDetail />} />
+    </Routes>
+    
+    </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App
+
+
+
+
+
